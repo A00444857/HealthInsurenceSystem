@@ -29,6 +29,8 @@ namespace HealthInsurenceSystem
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")
                     ));
+            services.AddMvc().AddSessionStateTempDataProvider();
+            services.AddSession();
             services.AddControllersWithViews();
         }
 
@@ -47,7 +49,7 @@ namespace HealthInsurenceSystem
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
+            app.UseSession();
             app.UseRouting();
 
             app.UseAuthorization();

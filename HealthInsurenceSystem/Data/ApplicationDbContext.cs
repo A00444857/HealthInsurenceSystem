@@ -14,5 +14,6 @@ namespace HealthInsurenceSystem.Data
         {
         }
         public DbSet<Person> Person { get; set; }
+        public DbSet<Customer> Cutomer { get; set; }
     }
 }

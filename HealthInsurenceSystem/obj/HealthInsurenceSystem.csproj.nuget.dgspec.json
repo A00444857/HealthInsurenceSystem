@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\HealthInsurenceSystem\\HealthInsurenceSystem\\HealthInsurenceSystem.csproj": {}
+    "D:\\GitHub\\HealthInsurenceSystem\\HealthInsurenceSystem\\HealthInsurenceSystem.csproj": {}
   },
   "projects": {
-    "D:\\HealthInsurenceSystem\\HealthInsurenceSystem\\HealthInsurenceSystem.csproj": {
+    "D:\\GitHub\\HealthInsurenceSystem\\HealthInsurenceSystem\\HealthInsurenceSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\HealthInsurenceSystem\\HealthInsurenceSystem\\HealthInsurenceSystem.csproj",
+        "projectUniqueName": "D:\\GitHub\\HealthInsurenceSystem\\HealthInsurenceSystem\\HealthInsurenceSystem.csproj",
         "projectName": "HealthInsurenceSystem",
-        "projectPath": "D:\\HealthInsurenceSystem\\HealthInsurenceSystem\\HealthInsurenceSystem.csproj",
+        "projectPath": "D:\\GitHub\\HealthInsurenceSystem\\HealthInsurenceSystem\\HealthInsurenceSystem.csproj",
         "packagesPath": "C:\\Users\\MIT\\.nuget\\packages\\",
-        "outputPath": "D:\\HealthInsurenceSystem\\HealthInsurenceSystem\\obj\\",
+        "outputPath": "D:\\GitHub\\HealthInsurenceSystem\\HealthInsurenceSystem\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MIT\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -43,6 +43,10 @@
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.4, )"
+            },
+            "Microsoft.AspNetCore.Session": {
+              "target": "Package",
+              "version": "[2.2.0, )"
             },
             "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",

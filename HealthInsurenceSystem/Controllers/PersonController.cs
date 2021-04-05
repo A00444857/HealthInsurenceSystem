@@ -5,12 +5,16 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
+using Microsoft.AspNetCore.Http;
+using System.Diagnostics;
 namespace HealthInsurenceSystem.Controllers
 {
     public class PersonController : Controller
     {
+
         private readonly ApplicationDbContext _db;
+        private readonly object Session;
+
         public PersonController(ApplicationDbContext db)
         {
             _db = db;
@@ -31,11 +35,19 @@ namespace HealthInsurenceSystem.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult login(Person obj)
         {
-            IEnumerable<Person> objList = _db.Person;
-            if (ModelState.IsValid)
+            IEnumerable<Person> x1 = _db.Person.Where(a=>a.Email==obj.Email && a.Password==obj.Password);
+            
+            if (ModelState.IsValid) 
             {
-                
-                return RedirectToAction("ok");
+                if (x1.Count()>0)
+                {
+                    HttpContext.Session.SetInt32("loggedIn", 1);
+                    return RedirectToAction("ok");
+                }
+                else
+                {
+                    return RedirectToAction("Notok");
+                }
             }
             return RedirectToAction("Notok");
         }
