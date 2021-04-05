@@ -13,7 +13,6 @@ namespace HealthInsurenceSystem.Controllers
     {
 
         private readonly ApplicationDbContext _db;
-        private readonly object Session;
 
         public PersonController(ApplicationDbContext db)
         {

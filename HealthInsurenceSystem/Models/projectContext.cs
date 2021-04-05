@@ -55,18 +55,21 @@ namespace HealthInsurenceSystem.Models
                 entity.ToTable("Customer");
 
                 entity.Property(e => e.Aemail)
+                    .IsRequired()
                     .HasMaxLength(30)
                     .IsUnicode(false)
                     .HasColumnName("AEmail")
                     .IsFixedLength(true);
 
                 entity.Property(e => e.Cemail)
+                    .IsRequired()
                     .HasMaxLength(30)
                     .IsUnicode(false)
-                    .HasColumnName("CEmail")
                     .IsFixedLength(true);
 
-                entity.Property(e => e.Dop).HasColumnType("date");
+                entity.Property(e => e.Duedate).HasColumnType("date");
+
+                entity.Property(e => e.Lastpayment).HasColumnType("date");
             });
 
             modelBuilder.Entity<Payment>(entity =>
@@ -83,13 +86,15 @@ namespace HealthInsurenceSystem.Models
 
             modelBuilder.Entity<Person>(entity =>
             {
-                entity.HasNoKey();
+                entity.HasKey(e => e.Cnumber)
+                    .HasName("PK__Person__1E5A0B8E14D13EED");
 
                 entity.ToTable("Person");
 
                 entity.Property(e => e.Dob).HasColumnType("date");
 
                 entity.Property(e => e.Email)
+                    .IsRequired()
                     .HasMaxLength(30)
                     .IsUnicode(false)
                     .IsFixedLength(true);

@@ -8,7 +8,6 @@ namespace HealthInsurenceSystem.Models
 {
     public partial class Person
     {
-
         [Key]
         public int Cnumber { get; set; }
         [Required(ErrorMessage = "Please enter your email")]
@@ -16,8 +15,7 @@ namespace HealthInsurenceSystem.Models
         [EmailAddress(ErrorMessage = "Please enter a valid email")]
         public string Email { get; set; }
         public string Name { get; set; }
-        public DateTime Dob { get; set; }
-       
+        public DateTime? Dob { get; set; }
         public string Password { get; set; }
     }
 }

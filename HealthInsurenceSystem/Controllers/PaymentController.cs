@@ -22,11 +22,15 @@ namespace HealthInsurenceSystem.Controllers
         {
             return View();
         }
+        public IActionResult PaymentPage()
+        {
+            return View();
+        }
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Index(Customer obj)
         {
-            IEnumerable<Customer> x1 = _db.Cutomer.Where(a => a.Cemail == obj.Cemail && a.Pnumber == obj.Pnumber);
+            IEnumerable<Customer> x1 = _db.Customer.Where(a => a.Cemail == obj.Cemail && a.Pnumber == obj.Pnumber);
 
             if (ModelState.IsValid)
             {
