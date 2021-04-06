@@ -3,7 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31105.61
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthInsurenceSystem", "HealthInsurenceSystem\HealthInsurenceSystem.csproj", "{D7D00BAD-0D7E-4141-B3D4-374C81A3843B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HealthInsurenceSystem", "HealthInsurenceSystem\HealthInsurenceSystem.csproj", "{D7D00BAD-0D7E-4141-B3D4-374C81A3843B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C617263C-535B-42A7-AAB7-5CE20CFBFF47}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

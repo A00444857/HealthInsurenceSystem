@@ -34,6 +34,7 @@ namespace HealthInsurenceSystem.Controllers
                 if (x1.Count() > 0)
                 {
                     TempData["data"] = _db.Customer.First().Amount;
+                    TempData["Epay"]= _db.Customer.First().Cemail;
                     return RedirectToAction("PaymentPage");
                 }
                 else
@@ -42,6 +43,26 @@ namespace HealthInsurenceSystem.Controllers
                 }
             }
             return RedirectToAction("Notok");
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult check(Payment obj)
+        {
+            DateTime now = DateTime.Today;
+            IEnumerable<Payment> x1 = _db.Payment.Where(a => a.Cardnumber == obj.Cardnumber && a.ExpiredDate==obj.ExpiredDate && a.Cvv == obj.Cvv);
+            if (ModelState.IsValid)
+            {
+                if (x1.Count() > 0)
+                {
+                    var x=TempData["data"];
+                    var lpay = _db.Customer.First(a => a.Cemail == TempData["Epay"].ToString());
+                    lpay.Lastpayment = now;
+                    _db.SaveChanges();
+                    return View("ok");
+                }
+                    
+            }
+            return View("Notok");
         }
     }
 }

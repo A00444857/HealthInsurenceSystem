@@ -336,8 +336,6 @@ D:\GitHub\HealthInsurenceSystem\HealthInsurenceSystem\obj\Debug\net5.0\HealthIns
 D:\GitHub\HealthInsurenceSystem\HealthInsurenceSystem\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 D:\GitHub\HealthInsurenceSystem\HealthInsurenceSystem\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
 D:\GitHub\HealthInsurenceSystem\HealthInsurenceSystem\obj\Debug\net5.0\Razor\Views\Person\login.cshtml.g.cs
-D:\GitHub\HealthInsurenceSystem\HealthInsurenceSystem\obj\Debug\net5.0\Razor\Views\Person\Notok.cshtml.g.cs
-D:\GitHub\HealthInsurenceSystem\HealthInsurenceSystem\obj\Debug\net5.0\Razor\Views\Person\ok.cshtml.g.cs
 D:\GitHub\HealthInsurenceSystem\HealthInsurenceSystem\obj\Debug\net5.0\Razor\Views\Person\signup.cshtml.g.cs
 D:\GitHub\HealthInsurenceSystem\HealthInsurenceSystem\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 D:\GitHub\HealthInsurenceSystem\HealthInsurenceSystem\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
@@ -355,3 +353,6 @@ D:\GitHub\HealthInsurenceSystem\HealthInsurenceSystem\obj\Debug\net5.0\HealthIns
 D:\GitHub\HealthInsurenceSystem\HealthInsurenceSystem\obj\Debug\net5.0\Razor\Views\Payment\Index.cshtml.g.cs
 D:\GitHub\HealthInsurenceSystem\HealthInsurenceSystem\obj\Debug\net5.0\Razor\Views\Payment\PaymentPage.cshtml.g.cs
 D:\GitHub\HealthInsurenceSystem\HealthInsurenceSystem\obj\Debug\net5.0\Razor\Views\Home\Logout.cshtml.g.cs
+D:\GitHub\HealthInsurenceSystem\HealthInsurenceSystem\obj\Debug\net5.0\Razor\Views\Payment\check.cshtml.g.cs
+D:\GitHub\HealthInsurenceSystem\HealthInsurenceSystem\obj\Debug\net5.0\Razor\Views\Shared\Notok.cshtml.g.cs
+D:\GitHub\HealthInsurenceSystem\HealthInsurenceSystem\obj\Debug\net5.0\Razor\Views\Shared\ok.cshtml.g.cs
