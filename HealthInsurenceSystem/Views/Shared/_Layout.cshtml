@@ -13,7 +13,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">HealthInsurenceSystem</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">SMU Health Insurance</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -24,8 +24,17 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Policy Details</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Payment" asp-action="Index">Quick Payment</a>
                         </li>
+                        @if (Context.Session.GetInt32("loggedIn") == 1)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Person" asp-action="login">Summary</a>
+                            </li>
+                        }
                         @if (Context.Session.GetInt32("loggedIn") != 1)
                         {
                             <li class="nav-item">
@@ -35,7 +44,7 @@
                         else
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">log out</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Logout">log out</a>
                             </li>
                         }
 

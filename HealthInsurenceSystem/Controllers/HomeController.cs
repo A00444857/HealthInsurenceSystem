@@ -23,7 +23,11 @@ namespace HealthInsurenceSystem.Controllers
         {
             return View();
         }
-
+        public IActionResult Logout()
+        {
+            HttpContext.Session.SetInt32("loggedIn", 0);
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();

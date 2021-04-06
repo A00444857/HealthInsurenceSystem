@@ -352,6 +352,6 @@ D:\GitHub\HealthInsurenceSystem\HealthInsurenceSystem\obj\Debug\net5.0\HealthIns
 D:\GitHub\HealthInsurenceSystem\HealthInsurenceSystem\obj\Debug\net5.0\ref\HealthInsurenceSystem.dll
 D:\GitHub\HealthInsurenceSystem\HealthInsurenceSystem\obj\Debug\net5.0\HealthInsurenceSystem.pdb
 D:\GitHub\HealthInsurenceSystem\HealthInsurenceSystem\obj\Debug\net5.0\HealthInsurenceSystem.genruntimeconfig.cache
-D:\GitHub\HealthInsurenceSystem\HealthInsurenceSystem\obj\Debug\net5.0\Razor\Views\Shared\_LoggedIn.cshtml.g.cs
 D:\GitHub\HealthInsurenceSystem\HealthInsurenceSystem\obj\Debug\net5.0\Razor\Views\Payment\Index.cshtml.g.cs
 D:\GitHub\HealthInsurenceSystem\HealthInsurenceSystem\obj\Debug\net5.0\Razor\Views\Payment\PaymentPage.cshtml.g.cs
+D:\GitHub\HealthInsurenceSystem\HealthInsurenceSystem\obj\Debug\net5.0\Razor\Views\Home\Logout.cshtml.g.cs
