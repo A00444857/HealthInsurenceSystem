@@ -12,8 +12,6 @@ namespace HealthInsurenceSystem.Controllers
     public class PaymentController : Controller
     {
         private readonly ApplicationDbContext _db;
-        
-
         public PaymentController(ApplicationDbContext db)
         {
             _db = db;
@@ -31,12 +29,11 @@ namespace HealthInsurenceSystem.Controllers
         public IActionResult Index(Customer obj)
         {
             IEnumerable<Customer> x1 = _db.Customer.Where(a => a.Cemail == obj.Cemail && a.Pnumber == obj.Pnumber);
-
             if (ModelState.IsValid)
             {
                 if (x1.Count() > 0)
                 {
-                    
+                    TempData["data"] = _db.Customer.First().Amount;
                     return RedirectToAction("PaymentPage");
                 }
                 else

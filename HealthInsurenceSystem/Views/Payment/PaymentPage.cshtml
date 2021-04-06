@@ -1,4 +1,8 @@
-﻿<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+﻿@using HealthInsurenceSystem.Models
+
+@model  IEnumerable<HealthInsurenceSystem.Models.Customer>
+ 
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
@@ -20,6 +24,7 @@
         padding-left: 0px;
     }
 </style>
+
 <div class="container">
     <div class="row">
         <div class="col-xs-12 col-md-4">
@@ -75,7 +80,12 @@
             </div>
             <ul class="nav nav-pills nav-stacked">
                 <li class="active">
-                    <a href="#"><span class="badge pull-right"><span class="glyphicon glyphicon-usd"></span>4200</span> Final Payment</a>
+                    <a href="#">
+                        <span class="badge pull-right">
+                            <span class="glyphicon glyphicon-usd">@TempData["data"]</span>
+                        </span> Final Payment is
+                    </a>
+                    
                 </li>
             </ul>
             <br />
