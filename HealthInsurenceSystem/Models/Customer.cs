@@ -9,9 +9,8 @@ namespace HealthInsurenceSystem.Models
     public partial class Customer
     {
         [Key]
-        public int Pnumber { get; set; }
         public string Cemail { get; set; }
-        public string Ptype { get; set; }
+        public int Pnumber { get; set; }
         public string Aemail { get; set; }
         public DateTime Duedate { get; set; }
         public int Amount { get; set; }
