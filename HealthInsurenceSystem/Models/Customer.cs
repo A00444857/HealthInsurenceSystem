@@ -12,8 +12,10 @@ namespace HealthInsurenceSystem.Models
         public string Cemail { get; set; }
         public int Pnumber { get; set; }
         public string Aemail { get; set; }
-        public DateTime Duedate { get; set; }
+        public DateTime Purchaseddate { get; set; }
         public int Amount { get; set; }
+        public int Duration { get; set; }
+        public string Ptype { get; set; }
         public DateTime? Lastpayment { get; set; }
     }
 }

@@ -67,7 +67,7 @@ namespace HealthInsurenceSystem.Models
                     .IsUnicode(false)
                     .IsFixedLength(true);
 
-                entity.Property(e => e.Duedate).HasColumnType("date");
+                entity.Property(e => e.Purchaseddate).HasColumnType("date");
 
                 entity.Property(e => e.Lastpayment).HasColumnType("date");
             });
