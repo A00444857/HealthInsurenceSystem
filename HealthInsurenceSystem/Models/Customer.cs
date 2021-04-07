@@ -8,8 +8,9 @@ namespace HealthInsurenceSystem.Models
 {
     public partial class Customer
     {
-        [Key]
+        
         public string Cemail { get; set; }
+        [Key]
         public int Pnumber { get; set; }
         public string Aemail { get; set; }
         public DateTime Duedate { get; set; }

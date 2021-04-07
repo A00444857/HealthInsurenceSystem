@@ -356,3 +356,4 @@ D:\GitHub\HealthInsurenceSystem\HealthInsurenceSystem\obj\Debug\net5.0\Razor\Vie
 D:\GitHub\HealthInsurenceSystem\HealthInsurenceSystem\obj\Debug\net5.0\Razor\Views\Payment\check.cshtml.g.cs
 D:\GitHub\HealthInsurenceSystem\HealthInsurenceSystem\obj\Debug\net5.0\Razor\Views\Shared\Notok.cshtml.g.cs
 D:\GitHub\HealthInsurenceSystem\HealthInsurenceSystem\obj\Debug\net5.0\Razor\Views\Shared\ok.cshtml.g.cs
+D:\GitHub\HealthInsurenceSystem\HealthInsurenceSystem\obj\Debug\net5.0\Razor\Views\Payment\PaymentDone.cshtml.g.cs

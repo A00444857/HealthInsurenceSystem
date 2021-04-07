@@ -24,23 +24,49 @@ namespace HealthInsurenceSystem.Controllers
         {
             return View();
         }
+        public IActionResult PaymentDone()
+        {
+            return View();
+        }
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Index(Customer obj)
         {
-            IEnumerable<Customer> x1 = _db.Customer.Where(a => a.Cemail == obj.Cemail && a.Pnumber == obj.Pnumber);
+            Customer x1 = _db.Customer.Find(obj.Pnumber);
             if (ModelState.IsValid)
             {
-                if (x1.Count() > 0)
+                if (x1 == null)
                 {
-                    TempData["data"] = _db.Customer.First().Amount;
-                    TempData["Epay"]= _db.Customer.First().Cemail;
-                    return RedirectToAction("PaymentPage");
+                    HttpContext.Session.SetInt32("emailError", 1);
+                    return RedirectToAction("Index");
+                }
+                DateTime dat;
+                if (x1.Lastpayment==null)
+                {
+                    dat = (DateTime)x1.Purchaseddate;
                 }
                 else
                 {
-                    return RedirectToAction("Notok");
+                     dat = (DateTime)x1.Lastpayment;
                 }
+                
+                DateTime now = DateTime.Today;
+                TempData["Ldate"] = dat;
+                TempData["Amount"] = Int32.Parse(x1.Amount.ToString());
+                TempData["data"] = x1.Amount;
+                    if (now.Month - dat.Month > 0)
+                    {
+                        TempData["Policy number"] = x1.Pnumber;
+                        TempData["Policy type"] =x1.Ptype;
+                        TempData["Epay"] = x1.Cemail;
+                        TempData["Amount"]= Int32.Parse(TempData["Amount"].ToString())* (now.Month - dat.Month);
+                        TempData["data"]=Int32.Parse(TempData["data"].ToString())* (now.Month - dat.Month);
+                    return RedirectToAction("PaymentPage");
+                    }
+                    else
+                    {
+                        return RedirectToAction("PaymentDone");
+                    } 
             }
             return RedirectToAction("Notok");
         }
@@ -54,13 +80,21 @@ namespace HealthInsurenceSystem.Controllers
             {
                 if (x1.Count() > 0)
                 {
-                    var x=TempData["data"];
-                    var lpay = _db.Customer.First(a => a.Cemail == TempData["Epay"].ToString());
+                    Paymentlog p = new Paymentlog();
+                    DateTime dat = (DateTime)TempData["Ldate"];
+                    string x= TempData["Policy number"].ToString();
+                    p.Cemail = TempData["Epay"].ToString();
+                    p.Paymentdate = now;
+                    p.Pnumber = Int32.Parse(x);
+                    _db.Paymentlog.Add(p);
+                    _db.SaveChanges();
+                    Customer lpay = _db.Customer.Find(Int32.Parse(x));
                     lpay.Lastpayment = now;
                     _db.SaveChanges();
-                    return View("ok");
-                }
-                    
+                    lpay.Duration=lpay.Duration- dat.Month;
+                    _db.SaveChanges();
+                    return View(_db.Paymentlog.Where(a=> a.Pnumber== Int32.Parse(x)));
+                }    
             }
             return View("Notok");
         }

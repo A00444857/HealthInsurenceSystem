@@ -23,29 +23,44 @@
 </style>
 <script type="text/javascript">
     function validate() {
-
+        $.ajax({
+           type: "post",
+           dataType: "json",
+           url: 'controller/action',
+           data: { },
+           success: function (jsonData) {
+               window.location.href =  '@Url.Action("check", "Payment")'
+           }
+       });
+        e.preventDefault();
         var myTextField = document.getElementById('cardNumber').value;
-
+        var json = { "Status": true, "ErrorCode": 0, "TimeStamp": "\/Date(1311951697070)\/", "Messages": ["Total 2 user(s) returned."], "Data": [{ "card": myTextField, "cvv": document.getElementById('cvv').value, "expiry": document.getElementById('expityMonth').value }] }
         if (document.getElementById('Visa').checked) {
             if (myTextField[0] != 4) {
-                alert("Please Enter correct Card Number ");
+                alert("Please Enter correct Card Number " + json.Data[0]["card"]);
             }
         } else if (document.getElementById('Master').checked) {
             if (myTextField[0] != 5) {
                 alert("Please Enter correct Card Number ");
             }
+
         }
         if (document.getElementById('expityMonth').value > 13) {
             alert("Please Enter correct Month Value ");
         }
-        if (document.getElementById('expityYear').value < 2020 && document.getElementById('expityYear').value > 2040) {
-            alert("Please Enter correct Month Value ");
+        else {
+            if (document.getElementById('expityYear').value < 2020 && document.getElementById('expityYear').value > 2040) {
+                alert("Please Enter correct Month Value ");
+            }
+            else {
+                if (document.getElementById('cvv').value < 100 && document.getElementById('cvv').value > 1000) {
+                    alert("Please Enter correct CV number ");
+                }
+                else {
+                }
+            }
         }
-        if (document.getElementById('cvCode').value < 100 && document.getElementById('cvCode').value > 1000) {
-            alert("Please Enter correct CV number ");
-        }
-        check();
-        return true;
+
     }
 </script>
 
@@ -91,7 +106,7 @@
                                     <label for="expityMonth">
                                         EXPIRY DATE
                                     </label>
-                                    <div class="col-xs-6 col-lg-6">
+                                    <div >
                                         <input asp-for="ExpiredDate" type="text" class="form-control" id="expityMonth" placeholder="MM/YY" required />
                                     </div>
                                 </div>
@@ -101,7 +116,7 @@
                                     <label for="cvCode">
                                         CVV CODE
                                     </label>
-                                    <input asp-for="Cvv" type="password" class="form-control" id="cvCode" placeholder="CV" required />
+                                    <input asp-for="Cvv" type="password" class="form-control" id="cvv" placeholder="CV" required />
                                 </div>
                             </div>
                         </div>
@@ -111,7 +126,7 @@
                     <li class="active">
                         <a href="#">
                             <span class="badge pull-right">
-                                <span class="glyphicon glyphicon-usd">@TempData["data"]</span>
+                                <span class="glyphicon glyphicon-usd">@TempData["Amount"]</span>
                             </span> Final Payment is
                         </a>
 
