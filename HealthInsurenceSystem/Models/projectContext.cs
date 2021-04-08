@@ -18,9 +18,10 @@ namespace HealthInsurenceSystem.Models
         }
 
         public virtual DbSet<Admin> Admins { get; set; }
+        public virtual DbSet<Contact> Contacts { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<Payment> Payments { get; set; }
-        public virtual DbSet<Paymentlog> Paymentlog { get; set; }
+        public virtual DbSet<Paymentlog> Paymentlogs { get; set; }
         public virtual DbSet<Person> People { get; set; }
         public virtual DbSet<Policy> Policies { get; set; }
 
@@ -47,30 +48,48 @@ namespace HealthInsurenceSystem.Models
                     .HasMaxLength(30)
                     .IsUnicode(false)
                     .IsFixedLength(true);
+
+                entity.Property(e => e.Ptype)
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+            });
+
+            modelBuilder.Entity<Contact>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToTable("Contact");
+
+                entity.Property(e => e.Name)
+                    .HasMaxLength(10)
+                    .IsFixedLength(true);
             });
 
             modelBuilder.Entity<Customer>(entity =>
             {
-                entity.HasNoKey();
+                entity.HasKey(e => e.Pnumber)
+                    .HasName("PK__Customer__BBE761DD09F4F645");
 
                 entity.ToTable("Customer");
 
                 entity.Property(e => e.Aemail)
                     .IsRequired()
                     .HasMaxLength(30)
-                    .IsUnicode(false)
-                    .HasColumnName("AEmail")
-                    .IsFixedLength(true);
+                    .IsUnicode(false);
 
                 entity.Property(e => e.Cemail)
                     .IsRequired()
                     .HasMaxLength(30)
-                    .IsUnicode(false)
-                    .IsFixedLength(true);
-
-                entity.Property(e => e.Purchaseddate).HasColumnType("date");
+                    .IsUnicode(false);
 
                 entity.Property(e => e.Lastpayment).HasColumnType("date");
+
+                entity.Property(e => e.Ptype)
+                    .IsRequired()
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Purchaseddate).HasColumnType("date");
             });
 
             modelBuilder.Entity<Payment>(entity =>
@@ -79,10 +98,29 @@ namespace HealthInsurenceSystem.Models
 
                 entity.ToTable("Payment");
 
+                entity.Property(e => e.Cardnumber)
+                    .HasMaxLength(100)
+                    .IsUnicode(false);
+
                 entity.Property(e => e.ExpiredDate)
                     .HasMaxLength(5)
                     .IsUnicode(false)
                     .IsFixedLength(true);
+            });
+
+            modelBuilder.Entity<Paymentlog>(entity =>
+            {
+                entity.HasKey(e => e.Paymentnumber)
+                    .HasName("PK__Paymentl__954840B17BE78B1B");
+
+                entity.ToTable("Paymentlog");
+
+                entity.Property(e => e.Cemail)
+                    .IsRequired()
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Paymentdate).HasColumnType("date");
             });
 
             modelBuilder.Entity<Person>(entity =>
@@ -122,6 +160,10 @@ namespace HealthInsurenceSystem.Models
                 entity.Property(e => e.MinAge).HasColumnName("minAge");
 
                 entity.Property(e => e.MonthPremium).HasColumnName("monthPremium");
+
+                entity.Property(e => e.Ptype)
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
             });
 
             OnModelCreatingPartial(modelBuilder);

@@ -19,6 +19,7 @@ namespace HealthInsurenceSystem.Data
         public DbSet<Policy> Policy { get; set; }
         public DbSet<Admin> Admin { get; set; }
         public DbSet<Paymentlog> Paymentlog { get; set; }
+        public DbSet<Contact> Contact { get; set; }
 
     }
 }

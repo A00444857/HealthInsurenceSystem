@@ -11,7 +11,7 @@ namespace HealthInsurenceSystem.Models
     {
         [Key]
         public string AdminEmail { get; set; }
-        public int? Pnumber { get; set; }
+        public string Ptype { get; set; }
         public int? Action { get; set; }
     }
 }
