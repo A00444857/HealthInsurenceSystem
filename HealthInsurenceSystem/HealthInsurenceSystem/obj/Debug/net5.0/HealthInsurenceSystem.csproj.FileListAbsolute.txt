@@ -725,3 +725,4 @@ C:\Users\Peter Parker\source\repos\HealthInsurenceSystem\HealthInsurenceSystem\o
 C:\Users\Peter Parker\source\repos\HealthInsurenceSystem\HealthInsurenceSystem\obj\Debug\net5.0\Razor\Views\Policies\knowmore.cshtml.g.cs
 C:\Users\Peter Parker\source\repos\HealthInsurenceSystem\HealthInsurenceSystem\obj\Debug\net5.0\Razor\Views\Policies\addtocart.cshtml.g.cs
 C:\Users\Peter Parker\source\repos\HealthInsurenceSystem\HealthInsurenceSystem\obj\Debug\net5.0\Razor\Views\Policies\deletefromcart.cshtml.g.cs
+C:\Users\Peter Parker\source\repos\HealthInsurenceSystem\HealthInsurenceSystem\obj\Debug\net5.0\Razor\Views\Policies\payonline.cshtml.g.cs

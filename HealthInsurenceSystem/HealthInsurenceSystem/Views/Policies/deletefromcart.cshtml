@@ -3,10 +3,10 @@
     ViewData["Title"] = "deletefromcart";
 }
 
-<h1>Delete from Cart</h1>
+<h1>Remove Policy from Cart</h1>
 <hr />
 <hr />
-<h2> Policy has been deleted from your cart</h2>
+<h2> Policy has been selected for removal</h2>
 
 
 
@@ -15,7 +15,7 @@
     <div class="border p-3">
 
         <div class="form-group row">
-            <h2 class="text-info pl-3">Policy has been removed from Cart</h2>
+            <h2 class="text-info pl-3">Click on Remove Policy to remove from Cart</h2>
         </div>
         <div class="row">
             <div class="col-8">
@@ -43,7 +43,7 @@
                     <div class="col-8 offset-4 row">
 
                         <div class="col">
-                            <input type="submit" class="btn btn-info w-100" value="Remove Policy" />
+                           <a asp-action="Index" class="btn btn-info w-100"> Remove Policy </a>
                         </div>
                         <div class="col">
                             <a asp-action="Index" class="btn btn-success w-100"><i class="fas fa-sign-out-alt"></i> Back</a>
