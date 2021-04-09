@@ -25,5 +25,20 @@ namespace HealthInsurenceSystem.Controllers
             IEnumerable<Policy> objList = _db.Policy;
             return View(objList);
         }
+        public IActionResult knowmore()
+        {
+            return View();
+        }
+        public IActionResult addtocart(string Ptype)
+        {
+            
+            var obj = _db.Policy.Find(Ptype);
+            return View(obj);
+        }
+        public IActionResult deletefromcart(string Ptype)
+        {
+            var obj = _db.Policy.Find(Ptype);
+            return View(obj);
+        }
     }
 }

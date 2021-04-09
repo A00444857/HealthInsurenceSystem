@@ -1,4 +1,4 @@
-﻿@model IEnumerable<HealthInsurenceSystem.Models.Policy>
+﻿    @model IEnumerable<HealthInsurenceSystem.Models.Policy>
 
 <head>
 
@@ -42,19 +42,24 @@
                         Duration
                     </th>
                     <th> More Info</th>
+                    <th>Add/Delete Policy from Cart</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach(var obj in Model)
                 {
                 <tr>
-                    <td width="50%">@obj.Ptype</td>
-                    <td width="50%">@obj.MinAge</td>
-                    <td width="50%">@obj.MaxAge</td>
-                    <td width="50%">@obj.MonthPremium</td>
-                    <td width="50%">@obj.Duration</td>
-                    <td width="50%">+Know More</td>
-                    
+                    <td width="15%">@obj.Ptype</td>
+                    <td width="10%">@obj.MinAge</td>
+                    <td width="10%">@obj.MaxAge</td>
+                    <td width="10%">@obj.MonthPremium</td>
+                    <td width="10%">@obj.Duration</td>
+                    <td width="15%"><a asp-controller="Policies" asp-action="knowmore" class="btn btn-primary">+Know More </a></td>
+                    <td width="20%" class="text-center">
+                        <a asp-controller="Policies" asp-route-Ptype="@obj.Ptype" asp-action="addtocart" class="btn btn-success">+ Add to Cart </a>
+                        <a asp-controller="Policies" asp-route-Ptype="@obj.Ptype" asp-action="deletefromcart" class="btn btn-danger">- Delete from Cart </a>
+
+</td>
                 </tr>
 
 
