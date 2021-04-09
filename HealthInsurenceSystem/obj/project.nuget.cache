@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "w5eirBUrotZYiJ02LTKf/CncNjr4wlpuJAoXbVPjoR3JDWzSotfjNSSeEgFK1yx2vI7NrNn+ZXe0tPGgCbBlPw==",
+  "dgSpecHash": "u2c8bKcB+6mVtk382QulTV232Fgn3R30fVhw+RbsCZu3qf/nep1VwzWsECXwWchtNSeAedyDWPKBKsV0rCH6Yg==",
   "success": true,
-  "projectFilePath": "D:\\GitHub\\HealthInsurenceSystem\\HealthInsurenceSystem\\HealthInsurenceSystem.csproj",
+  "projectFilePath": "D:\\GitHub\\HIS\\HealthInsurenceSystem\\HealthInsurenceSystem.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MIT\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\MIT\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.4\\microsoft.aspnetcore.cryptography.internal.5.0.4.nupkg.sha512",

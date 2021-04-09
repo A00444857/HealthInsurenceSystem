@@ -7985,11 +7985,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitHub\\HealthInsurenceSystem\\HealthInsurenceSystem\\HealthInsurenceSystem.csproj",
+      "projectUniqueName": "D:\\GitHub\\HIS\\HealthInsurenceSystem\\HealthInsurenceSystem.csproj",
       "projectName": "HealthInsurenceSystem",
-      "projectPath": "D:\\GitHub\\HealthInsurenceSystem\\HealthInsurenceSystem\\HealthInsurenceSystem.csproj",
+      "projectPath": "D:\\GitHub\\HIS\\HealthInsurenceSystem\\HealthInsurenceSystem.csproj",
       "packagesPath": "C:\\Users\\MIT\\.nuget\\packages\\",
-      "outputPath": "D:\\GitHub\\HealthInsurenceSystem\\HealthInsurenceSystem\\obj\\",
+      "outputPath": "D:\\GitHub\\HIS\\HealthInsurenceSystem\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\MIT\\AppData\\Roaming\\NuGet\\NuGet.Config",

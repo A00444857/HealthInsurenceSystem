@@ -41,6 +41,7 @@ namespace HealthInsurenceSystem.Controllers
                 if (x1.Count()>0)
                 {
                     HttpContext.Session.SetInt32("loggedIn", 1);
+                    HttpContext.Session.SetString("emailID", x1.First().Email);
                     return RedirectToAction("ok");
                 }
                 else
