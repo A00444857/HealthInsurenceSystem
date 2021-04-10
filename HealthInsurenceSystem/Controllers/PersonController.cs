@@ -7,6 +7,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using System.Diagnostics;
+using System.Text.RegularExpressions;
+
 namespace HealthInsurenceSystem.Controllers
 {
     public class PersonController : Controller
@@ -40,9 +42,29 @@ namespace HealthInsurenceSystem.Controllers
             {
                 if (x1.Count()>0)
                 {
-                    HttpContext.Session.SetInt32("loggedIn", 1);
-                    HttpContext.Session.SetString("emailID", x1.First().Email);
-                    return RedirectToAction("ok");
+                    int x = x1.First().Email.IndexOf("his");
+                    int y = x1.First().Email.IndexOf("admin");
+                    if (x-y==6)
+                    {
+                        HttpContext.Session.SetInt32("loggedIn", 3);
+                        HttpContext.Session.SetString("emailID", x1.First().Email);
+                        return RedirectToAction("Index", "Home");
+                    }
+                    else
+                    {
+                        if (x1.First().Email.IndexOf("his") > 0)
+                        {
+                            HttpContext.Session.SetInt32("loggedIn", 2);
+                            HttpContext.Session.SetString("emailID", x1.First().Email);
+                            return RedirectToAction("Index", "Home");
+                        }
+                        else
+                        {
+                            HttpContext.Session.SetInt32("loggedIn", 1);
+                            HttpContext.Session.SetString("emailID", x1.First().Email);
+                            return RedirectToAction("Index", "Home");
+                        }
+                    }
                 }
                 else
                 {

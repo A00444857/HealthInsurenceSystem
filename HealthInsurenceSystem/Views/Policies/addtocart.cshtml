@@ -40,8 +40,13 @@
                         <label asp-for="Ptype"> Policy Name </label>
                     </div>
                     <div class="col-8">
-                        <input asp-for="Ptype" type="text" class="form-control" />
-                        <span asp-validation-for="Ptype" class="text-danger"></span>
+                        <div class="col-8">
+                            @Html.RadioButtonFor(m => m.Ptype, "Standard") Standard<br />
+                            @Html.RadioButtonFor(m => m.Ptype, "Gold")Gold<br />
+                            @Html.RadioButtonFor(m => m.Ptype, "Diamond")Diamond<br />
+                            @Html.RadioButtonFor(m => m.Ptype, "Platinum")Platinum<br />
+                            @Html.RadioButtonFor(m => m.Ptype, "Platinum")Super Platinum<br />
+                        </div>
                     </div>
 
                 </div>

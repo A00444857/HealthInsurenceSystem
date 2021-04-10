@@ -50,9 +50,17 @@
                         <td>
                             @if (obj.Lastpayment == null)
                             {
+                                int p;
                                 DateTime pd = (DateTime)obj.Purchaseddate;
                                 DateTime now = DateTime.Today;
-                                int p = obj.Amount*(now.Month - pd.Month);
+                                @if(now.Month - pd.Month == 0)
+                                {
+                                     p = obj.Amount;
+                                }
+                                else
+                                {
+                                     p = obj.Amount * (now.Month - pd.Month);
+                                }
                                 Context.Session.SetString("Amount", p.ToString());
                                  <a asp-controller = "Payment" asp-action = "PaymentPage" class="btn btn-primary"> Pay Now</a>
                             }

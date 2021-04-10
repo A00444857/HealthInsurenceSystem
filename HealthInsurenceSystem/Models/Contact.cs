@@ -9,8 +9,11 @@ namespace HealthInsurenceSystem.Models
     public partial class Contact
     {
         [Key]
+       
         public string Name { get; set; }
+        
         public string Mnumber { get; set; }
+        
         public string Subject { get; set; }
     }
 }

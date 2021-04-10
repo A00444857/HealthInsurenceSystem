@@ -29,7 +29,7 @@ namespace HealthInsurenceSystem.Controllers
         public IActionResult Logout()
         {
             HttpContext.Session.SetInt32("loggedIn", 0);
-            return View();
+            return View("Index");
         }
         public IActionResult Contact()
         {

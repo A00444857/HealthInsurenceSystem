@@ -12,9 +12,7 @@
         <div class="col-6">
             <h2 class="text-primary"> Policies List</h2>
         </div>
-        <div class="col-6">
-            Buy Policy
-        </div>
+        
     </div>
 
     <br/> <br/>
@@ -41,8 +39,8 @@
                     <th>
                         Duration
                     </th>
-                    <th> More Info</th>
-                    <th>Add/Delete Policy from Cart</th>
+                    <th> More Details</th>
+                    <th>Inquiry</th>
                 </tr>
             </thead>
             <tbody>
@@ -54,7 +52,7 @@
                     <td width="10%">@obj.MaxAge</td>
                     <td width="10%">@obj.MonthPremium</td>
                     <td width="10%">@obj.Duration</td>
-                    <td width="15%"><a asp-controller="Policies"  asp-action=@obj.Ptype.Replace(" ", "") class="btn btn-primary">+Know More </a></td>
+                    <td width="15%"><a asp-controller="Policies"  asp-action=@obj.Ptype.Replace(" ", "") class="btn btn-primary">Know More </a></td>
                     <td width="20%" class="text-center">
                         <a asp-controller="Policies"   asp-action="addtocart" class="btn btn-success"> Interested </a>
                         

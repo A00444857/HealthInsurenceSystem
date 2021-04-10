@@ -23,7 +23,6 @@
         padding-left: 0px;
     }
 </style>
-
 @if (Context.Session.GetInt32("CardNumber") == 1)
  {
     <h1><b> Error in Credit card Information</b></h1>
@@ -64,7 +63,7 @@
                                             EXPIRY DATE
                                         </label>
                                         <div>
-                                            <input asp-for="ExpiredDate" type="text" class="form-control" id="expityMonth" placeholder="MM/YY" required />
+                                            <input asp-for="ExpiredDate" type="text" class="form-control" id="expityMonth" placeholder="MM/YYYY" required />
                                         </div>
                                     </div>
                                 </div>
