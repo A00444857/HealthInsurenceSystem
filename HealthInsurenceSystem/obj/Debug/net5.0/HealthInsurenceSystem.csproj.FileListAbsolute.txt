@@ -751,9 +751,3 @@ C:\Users\MIT\Desktop\Recent\HIS\HealthInsurenceSystem\obj\Debug\net5.0\Razor\Vie
 C:\Users\MIT\Desktop\Recent\HIS\HealthInsurenceSystem\obj\Debug\net5.0\Razor\Views\Policies\Silver.cshtml.g.cs
 C:\Users\MIT\Desktop\Recent\HIS\HealthInsurenceSystem\obj\Debug\net5.0\Razor\Views\Policies\Standard.cshtml.g.cs
 C:\Users\MIT\Desktop\Recent\HIS\HealthInsurenceSystem\obj\Debug\net5.0\Razor\Views\Policies\SuperPlatinum.cshtml.g.cs
-D:\GitHub\HIS\HealthInsurenceSystem\obj\Debug\net5.0\Razor\Views\Policies\Gold.cshtml.g.cs
-D:\GitHub\HIS\HealthInsurenceSystem\obj\Debug\net5.0\Razor\Views\Policies\Interest.cshtml.g.cs
-D:\GitHub\HIS\HealthInsurenceSystem\obj\Debug\net5.0\Razor\Views\Policies\Platinum.cshtml.g.cs
-D:\GitHub\HIS\HealthInsurenceSystem\obj\Debug\net5.0\Razor\Views\Policies\Silver.cshtml.g.cs
-D:\GitHub\HIS\HealthInsurenceSystem\obj\Debug\net5.0\Razor\Views\Policies\Standard.cshtml.g.cs
-D:\GitHub\HIS\HealthInsurenceSystem\obj\Debug\net5.0\Razor\Views\Policies\SuperPlatinum.cshtml.g.cs

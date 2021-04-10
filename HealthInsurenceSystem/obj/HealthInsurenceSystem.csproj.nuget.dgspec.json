@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHub\\HIS\\HealthInsurenceSystem\\HealthInsurenceSystem.csproj": {}
+    "C:\\Users\\MIT\\Desktop\\Recent\\HIS\\HealthInsurenceSystem\\HealthInsurenceSystem.csproj": {}
   },
   "projects": {
-    "D:\\GitHub\\HIS\\HealthInsurenceSystem\\HealthInsurenceSystem.csproj": {
+    "C:\\Users\\MIT\\Desktop\\Recent\\HIS\\HealthInsurenceSystem\\HealthInsurenceSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub\\HIS\\HealthInsurenceSystem\\HealthInsurenceSystem.csproj",
+        "projectUniqueName": "C:\\Users\\MIT\\Desktop\\Recent\\HIS\\HealthInsurenceSystem\\HealthInsurenceSystem.csproj",
         "projectName": "HealthInsurenceSystem",
-        "projectPath": "D:\\GitHub\\HIS\\HealthInsurenceSystem\\HealthInsurenceSystem.csproj",
+        "projectPath": "C:\\Users\\MIT\\Desktop\\Recent\\HIS\\HealthInsurenceSystem\\HealthInsurenceSystem.csproj",
         "packagesPath": "C:\\Users\\MIT\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub\\HIS\\HealthInsurenceSystem\\obj\\",
+        "outputPath": "C:\\Users\\MIT\\Desktop\\Recent\\HIS\\HealthInsurenceSystem\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\MIT\\AppData\\Roaming\\NuGet\\NuGet.Config",
